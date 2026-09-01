@@ -1,0 +1,17 @@
+{
+  "name": "Leyes de la Vida",
+  "short_name": "Leyes",
+  "description": "Atlas interactivo de las leyes epónimas más importantes: economía, psicología, sociología, gestión, tecnología, estadística y medicina.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f4f0",
+  "theme_color": "#8a5a2b",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

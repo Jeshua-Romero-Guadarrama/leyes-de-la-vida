@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="claro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leyes de la Vida: catálogo interactivo de las leyes epónimas más importantes de la economía, la psicología, la sociología, la gestión, la tecnología, la estadística y la medicina, con simuladores, juegos y modo estudio.">
+  <meta name="author" content="Jeshua Romero Guadarrama">
+  <title>Leyes de la Vida — Atlas interactivo de leyes epónimas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="theme-color" content="#8a5a2b">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="cabecera-contenido">
+      <a class="marca" href="#/inicio">
+        <span class="marca-icono">⚖️</span>
+        <span>Leyes de la Vida</span>
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <a href="#/inicio" data-vista="inicio">Inicio</a>
+        <a href="#/catalogo" data-vista="catalogo">Catálogo</a>
+        <a href="#/interactivos" data-vista="interactivos">Interactivos</a>
+        <a href="#/estudio" data-vista="estudio">Estudio</a>
+      </nav>
+      <button class="boton-tema" id="boton-tema" aria-label="Cambiar tema claro u oscuro">🌙</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ Portada ============ -->
+    <section class="vista" id="vista-inicio">
+      <div class="heroe">
+        <h1>Las leyes que gobiernan la vida</h1>
+        <p class="subtitulo">
+          De la ley de Parkinson a la de Goodhart, de Gresham a Pournelle: un atlas interactivo de las
+          leyes epónimas más célebres de la economía, la psicología, la sociología, la gestión,
+          la tecnología, la estadística y la medicina. Explóralas, juégalas y ponte a prueba.
+        </p>
+        <div class="heroe-acciones">
+          <a class="boton boton-primario" href="#/catalogo">📖 Explorar el catálogo</a>
+          <a class="boton boton-secundario" href="#/interactivos">🕹️ Probar los interactivos</a>
+          <a class="boton boton-secundario" href="#/estudio">🎓 Modo estudio</a>
+        </div>
+      </div>
+
+      <div class="cifras">
+        <div class="cifra"><strong id="cifra-leyes">—</strong><span>leyes catalogadas</span></div>
+        <div class="cifra"><strong id="cifra-categorias">—</strong><span>disciplinas</span></div>
+        <div class="cifra"><strong id="cifra-interactivos">—</strong><span>juegos y simuladores</span></div>
+        <div class="cifra"><strong>0</strong><span>dependencias externas</span></div>
+      </div>
+
+      <h2 class="seccion-titulo">🗂️ Explora por disciplina</h2>
+      <div class="rejilla-categorias" id="rejilla-categorias"></div>
+
+      <h2 class="seccion-titulo">📌 La ley del día</h2>
+      <div id="ley-del-dia" style="max-width:520px"></div>
+    </section>
+
+    <!-- ============ Catálogo ============ -->
+    <section class="vista" id="vista-catalogo" hidden>
+      <h2 class="seccion-titulo" style="margin-top:0">📖 Catálogo de leyes</h2>
+      <div class="controles-catalogo">
+        <div class="buscador">
+          <input type="search" id="entrada-busqueda" placeholder="Buscar por nombre, autor, tema... (p. ej. «plazos», «fraude», «memoria»)" aria-label="Buscar leyes">
+        </div>
+        <div class="filtros" id="filtros-categorias"></div>
+      </div>
+      <p class="resumen-resultados" id="resumen-resultados"></p>
+      <div class="rejilla-leyes" id="rejilla-leyes"></div>
+    </section>
+
+    <!-- ============ Interactivos ============ -->
+    <section class="vista" id="vista-interactivos" hidden>
+      <h2 class="seccion-titulo" style="margin-top:0">🕹️ Juegos y simuladores</h2>
+      <p style="color:var(--tinta-suave);max-width:760px">
+        Cada interactivo pone una ley en tus manos: muévela, rómpela, gánale o piérdele.
+        Se entiende mejor una ley tras jugar con ella dos minutos que tras leerla diez veces.
+      </p>
+      <div id="zona-interactivos"></div>
+    </section>
+
+    <!-- ============ Estudio ============ -->
+    <section class="vista" id="vista-estudio" hidden>
+      <div class="panel-estudio" id="zona-quiz"></div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>
+      <strong>Leyes de la Vida</strong> · Atlas interactivo de leyes epónimas ·
+      Autor: <a href="https://github.com/Jeshua-Romero-Guadarrama" rel="author">Jeshua Romero Guadarrama</a>
+    </p>
+    <p>Contenido divulgativo: las «leyes» aquí recogidas son principios empíricos, heurísticas y regularidades célebres, no leyes exactas de la naturaleza.</p>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/interactivos.js"></script>
+  <script src="js/interactivos-extra1.js"></script>
+  <script src="js/interactivos-extra2.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

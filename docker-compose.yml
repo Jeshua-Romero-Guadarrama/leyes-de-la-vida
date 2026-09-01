@@ -1,0 +1,11 @@
+# Leyes de la Vida — Orquestación local
+# Autor: Jeshua Romero Guadarrama
+# Uso: docker compose up -d  →  http://localhost:8080
+
+services:
+  web:
+    build: .
+    container_name: leyes-de-la-vida
+    ports:
+      - "8080:80"
+    restart: unless-stopped

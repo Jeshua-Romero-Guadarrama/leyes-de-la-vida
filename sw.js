@@ -3,7 +3,7 @@
    Autor: Jeshua Romero Guadarrama
    ========================================================================== */
 
-var CACHE = "leyes-vida-v5";
+var CACHE = "leyes-vida-v6";
 var ARCHIVOS = [
   "./",
   "./index.html",
@@ -41,14 +41,21 @@ self.addEventListener("activate", function (e) {
   );
 });
 
+/* Red primero, caché de respaldo: las actualizaciones se ven al instante
+   y el sitio sigue funcionando sin conexión con la última copia guardada. */
 self.addEventListener("fetch", function (e) {
+  if (e.request.method !== "GET") return;
   e.respondWith(
-    caches.match(e.request).then(function (resp) {
-      return resp || fetch(e.request).then(function (r) {
+    fetch(e.request).then(function (r) {
+      if (r && r.ok && e.request.url.indexOf("http") === 0) {
         var copia = r.clone();
         caches.open(CACHE).then(function (c) { c.put(e.request, copia); });
-        return r;
+      }
+      return r;
+    }).catch(function () {
+      return caches.match(e.request).then(function (resp) {
+        return resp || caches.match("./index.html");
       });
-    }).catch(function () { return caches.match("./index.html"); })
+    })
   );
 });

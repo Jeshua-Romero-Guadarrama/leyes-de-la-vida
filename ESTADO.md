@@ -12,9 +12,12 @@ Proyecto: atlas interactivo de leyes epónimas. Publicado en:
 
 ## Hecho ✅
 
-1. **Catálogo**: 141 leyes en 10 disciplinas (`js/datos.js`):
-   - Economía (16), Psicología (13), Sociología (17), Gestión (13), Tecnología (14),
-     Estadística (10), Medicina (17), **Física (17)**, **Química (12)**, **Biología (12)**.
+0. **AMPLIACIÓN A 200 (2026-09-06 tarde)**: 20 leyes por disciplina exactas, paridad 200=200
+   verificada, sin referencias rotas. Nuevos archivos extra6/7/8. Paleta cambiada a
+   índigo/violeta moderno (el usuario rechazó la marrón/bronce). OJO: nunca editar
+   archivos con `Get-Content | Set-Content` en PowerShell (corrompió UTF-8 dos veces;
+   se reparó con roundtrip cp1252→utf8). Usar Edit/Write o Node para reemplazos.
+1. **Catálogo**: 200 leyes en 10 disciplinas (`js/datos.js`), 20 por disciplina.
 2. **Interactivos 1:1** (cada ley tiene el suyo), repartidos en:
    - `js/interactivos.js` — 17 originales + utilidades compartidas (`window.UTILSIM`: gráficos SVG, fábricas).
    - `js/interactivos-extra1.js` — fábricas `simCurva`/`simAdivina` + eco/tec/psi.

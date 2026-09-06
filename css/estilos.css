@@ -10,56 +10,56 @@
   --fuente-titulo: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
   --fuente-mono: "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;
 
-  --fondo: #faf7f2;
+  --fondo: #f5f6fb;
   --superficie: #ffffff;
-  --superficie-2: #f1ede4;
-  --borde: #e2ddd1;
-  --tinta: #221f1a;
-  --tinta-suave: #5f5a4e;
-  --tinta-tenue: #918b7c;
+  --superficie-2: #edeff7;
+  --borde: #dce0ee;
+  --tinta: #12152b;
+  --tinta-suave: #4a506b;
+  --tinta-tenue: #8189a3;
 
-  --acento: #9a6428;
-  --acento-2: #c08a3e;
+  --acento: #5b5fd8;
+  --acento-2: #8b5cf6;
   --acento-tinta: #ffffff;
-  --grad-acento: linear-gradient(135deg, #b07c33, #8a5220);
+  --grad-acento: linear-gradient(135deg, #6366f1, #8b5cf6);
 
-  --eco: #0e7490;
-  --psi: #7c3aed;
-  --soc: #d0357e;
-  --ges: #b45309;
+  --eco: #0891b2;
+  --psi: #9333ea;
+  --soc: #db2777;
+  --ges: #d97706;
   --tec: #2563eb;
-  --est: #047857;
-  --med: #cf2e2e;
+  --est: #059669;
+  --med: #dc2626;
   --fis: #ea580c;
-  --qui: #659e10;
+  --qui: #65a30d;
   --bio: #0d9488;
 
-  --ok: #15803d;
-  --error: #b91c1c;
+  --ok: #16a34a;
+  --error: #dc2626;
 
   --radio: 14px;
   --radio-s: 9px;
-  --sombra: 0 1px 2px rgba(58, 46, 24, 0.05), 0 8px 28px rgba(58, 46, 24, 0.09);
-  --sombra-alta: 0 4px 14px rgba(58, 46, 24, 0.13), 0 20px 56px rgba(58, 46, 24, 0.18);
+  --sombra: 0 1px 2px rgba(15, 23, 42, 0.05), 0 8px 28px rgba(51, 65, 130, 0.1);
+  --sombra-alta: 0 4px 14px rgba(15, 23, 42, 0.12), 0 20px 56px rgba(51, 65, 130, 0.2);
   --transicion: 170ms cubic-bezier(0.3, 0.6, 0.3, 1);
 }
 
 html[data-tema="oscuro"] {
-  --fondo: #151310;
-  --superficie: #1f1c17;
-  --superficie-2: #2a2620;
-  --borde: #3c372e;
-  --tinta: #ede9df;
-  --tinta-suave: #b6b0a2;
-  --tinta-tenue: #837d6e;
+  --fondo: #0d1020;
+  --superficie: #161a2e;
+  --superficie-2: #1f2440;
+  --borde: #2d3352;
+  --tinta: #e8eaf6;
+  --tinta-suave: #a7aec9;
+  --tinta-tenue: #6d7594;
 
-  --acento: #d9a05b;
-  --acento-2: #e7bc82;
-  --acento-tinta: #241605;
-  --grad-acento: linear-gradient(135deg, #e2ad66, #c8873c);
+  --acento: #818cf8;
+  --acento-2: #a78bfa;
+  --acento-tinta: #10122b;
+  --grad-acento: linear-gradient(135deg, #818cf8, #a78bfa);
 
-  --eco: #38bdd8;
-  --psi: #a78bfa;
+  --eco: #22d3ee;
+  --psi: #c084fc;
   --soc: #f472b6;
   --ges: #fbbf24;
   --tec: #60a5fa;
@@ -414,7 +414,7 @@ main {
   box-shadow: 0 3px 12px color-mix(in srgb, var(--chip-color, var(--acento)) 40%, transparent);
 }
 
-html[data-tema="oscuro"] .chip.activo { color: #171410; }
+html[data-tema="oscuro"] .chip.activo { color: #10122b; }
 
 .chip-n {
   font-size: 0.72rem;
@@ -476,7 +476,7 @@ html[data-tema="oscuro"] .chip.activo { color: #171410; }
   background: var(--cat-color, var(--acento));
 }
 
-html[data-tema="oscuro"] .insignia { color: #171410; }
+html[data-tema="oscuro"] .insignia { color: #10122b; }
 
 .insignia-interactivo {
   background: color-mix(in srgb, var(--cat-color, var(--acento)) 10%, transparent);

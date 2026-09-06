@@ -5,8 +5,8 @@
   "lang": "es",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f5f4f0",
-  "theme_color": "#8a5a2b",
+  "background_color": "#f5f6fb",
+  "theme_color": "#6366f1",
   "icons": [
     {
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>",

@@ -3,7 +3,7 @@
    Autor: Jeshua Romero Guadarrama
    ========================================================================== */
 
-var CACHE = "leyes-vida-v4";
+var CACHE = "leyes-vida-v5";
 var ARCHIVOS = [
   "./",
   "./index.html",
@@ -15,6 +15,9 @@ var ARCHIVOS = [
   "./js/interactivos-extra3.js",
   "./js/interactivos-extra4.js",
   "./js/interactivos-extra5.js",
+  "./js/interactivos-extra6.js",
+  "./js/interactivos-extra7.js",
+  "./js/interactivos-extra8.js",
   "./js/quiz.js",
   "./js/app.js",
   "./manifest.webmanifest"

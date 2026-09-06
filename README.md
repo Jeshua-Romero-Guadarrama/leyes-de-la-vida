@@ -1,6 +1,6 @@
 # ⚖️ Leyes de la Vida
 
-**Atlas interactivo de leyes epónimas**: un catálogo navegable de las leyes, principios y regularidades más célebres de **diez disciplinas** —economía, psicología, sociología, gestión, tecnología, estadística, medicina/psiquiatría, **física, química y biología**— con juegos, simuladores, animaciones y modo estudio.
+**Atlas interactivo de leyes epónimas**: un catálogo navegable de las leyes, principios y regularidades más célebres de **diez disciplinas** (20 leyes por cada una, 200 en total) —economía, psicología, sociología, gestión, tecnología, estadística, medicina/psiquiatría, **física, química y biología**— con juegos, simuladores, animaciones y modo estudio.
 
 De la **ley de Parkinson** («el trabajo se expande hasta llenar el tiempo disponible») a la **ley de Goodhart**, del **principio de Arquímedes** (con su barco ⛵ y su globo aerostático 🎈 animados) a la **selección natural de Darwin** (con sus polillas del abedul 🦋), pasando por **Gresham**, **Sturgeon**, **Pournelle**, **Benford**, **Zipf**, **Dunning-Kruger**, **Kepler**, **Le Chatelier**, **Mendel** y muchas más.
 
@@ -12,7 +12,7 @@ De la **ley de Parkinson** («el trabajo se expande hasta llenar el tiempo dispo
 
 ## ✨ Características
 
-- 📖 **Catálogo de más de 140 leyes en 10 disciplinas** con enunciado, explicación, ejemplo cotidiano, autoría, año y leyes relacionadas.
+- 📖 **Catálogo de 200 leyes en 10 disciplinas (20 por cada una)** con enunciado, explicación, ejemplo cotidiano, autoría, año y leyes relacionadas.
 - 🔍 **Buscador con filtros** por disciplina, contadores y botón 🎲 «ley al azar».
 - 🕹️ **Un juego, simulador o animación por cada ley** (correspondencia 1:1 verificada). Algunos destacados:
   - ⛵ El barco de acero que flota y 🎈 el globo aerostático (Arquímedes y Charles, animados)
@@ -79,6 +79,9 @@ El sitio es 100 % estático: activa GitHub Pages sobre la rama principal y queda
 │   ├── interactivos-extra3.js # Ampliación (Overton, Simpson, Monro-Kellie...)
 │   ├── interactivos-extra4.js # Física con animaciones (barco, globo, péndulo, Doppler...)
 │   ├── interactivos-extra5.js # Química y biología (Henry, Lavoisier, Darwin, Liebig...)
+│   ├── interactivos-extra6.js # Ampliación a 200: eco/tec/psi/soc/ges (Stroop, Lindy...)
+│   ├── interactivos-extra7.js # Ampliación: estadística/medicina/física (Monty Hall, Bayes...)
+│   ├── interactivos-extra8.js # Ampliación: química/biología (Graham, Lotka-Volterra...)
 │   ├── quiz.js                # Modo estudio
 │   └── app.js            # Navegación, catálogo, modal, arranque
 ├── sw.js                 # Service worker (sin conexión)

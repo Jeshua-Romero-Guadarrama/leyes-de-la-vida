@@ -1,8 +1,10 @@
 # ⚖️ Leyes de la Vida
 
-**Atlas interactivo de leyes epónimas**: un catálogo navegable de las leyes, principios y regularidades más célebres de la **economía, la psicología, la sociología, la gestión, la tecnología, la estadística y la medicina/psiquiatría**, con juegos, simuladores, diagramas y modo estudio.
+**Atlas interactivo de leyes epónimas**: un catálogo navegable de las leyes, principios y regularidades más célebres de **diez disciplinas** —economía, psicología, sociología, gestión, tecnología, estadística, medicina/psiquiatría, **física, química y biología**— con juegos, simuladores, animaciones y modo estudio.
 
-De la **ley de Parkinson** («el trabajo se expande hasta llenar el tiempo disponible») a la **ley de Goodhart** («cuando una medida se convierte en objetivo, deja de ser una buena medida»), pasando por **Gresham**, **Sturgeon**, **Pournelle**, **Benford**, **Zipf**, **Dunning-Kruger**, **Frank-Starling** y muchas más.
+De la **ley de Parkinson** («el trabajo se expande hasta llenar el tiempo disponible») a la **ley de Goodhart**, del **principio de Arquímedes** (con su barco ⛵ y su globo aerostático 🎈 animados) a la **selección natural de Darwin** (con sus polillas del abedul 🦋), pasando por **Gresham**, **Sturgeon**, **Pournelle**, **Benford**, **Zipf**, **Dunning-Kruger**, **Kepler**, **Le Chatelier**, **Mendel** y muchas más.
+
+🌐 **Web**: https://jeshua-romero-guadarrama.github.io/leyes-de-la-vida/
 
 **Autor:** [Jeshua Romero Guadarrama](https://github.com/Jeshua-Romero-Guadarrama)
 
@@ -10,20 +12,20 @@ De la **ley de Parkinson** («el trabajo se expande hasta llenar el tiempo dispo
 
 ## ✨ Características
 
-- 📖 **Catálogo de más de 80 leyes** con enunciado, explicación, ejemplo cotidiano, autoría, año y leyes relacionadas.
-- 🔍 **Buscador con filtros** por disciplina (busca «plazos», «fraude», «memoria»...).
-- 🕹️ **Un juego o simulador por cada ley** (86 interactivos): todas las leyes del catálogo se pueden experimentar en primera persona. Algunos destacados:
-  - ⏳ El trabajo que se expande (Parkinson)
-  - 💎 La criba del 90 % (Sturgeon)
-  - 🎯 La métrica corrompida (Goodhart)
-  - 🪙 Dinero malo, dinero bueno (Gresham)
-  - 🏰 La toma del castillo (Pournelle)
-  - 🚦 Juego de reacción con opciones (Hick) y 🎯 cazar dianas (Fitts)
-  - 🔢 La prueba del 7±2 (Miller) y 🔺 el triángulo que no existe (Gestalt/Kanizsa)
-  - 🕵️ El detector de fraudes (Benford) y 📚 el analizador de textos (Zipf)
-  - 🗳️ El voto útil (Duverger), ☠️ el hilo que muere (Godwin) y 🎭 ¿parodia o en serio? (Poe)
-  - 🖐️ El signo de la vesícula (Courvoisier), 🫛 el huerto de Mendel y 🫁 la ecuación de respirar (Fick)
-  - 🎬 La correlación fantasma (Berkson) y 🏷️ el nombre equivocado (Stigler)
+- 📖 **Catálogo de más de 140 leyes en 10 disciplinas** con enunciado, explicación, ejemplo cotidiano, autoría, año y leyes relacionadas.
+- 🔍 **Buscador con filtros** por disciplina, contadores y botón 🎲 «ley al azar».
+- 🕹️ **Un juego, simulador o animación por cada ley** (correspondencia 1:1 verificada). Algunos destacados:
+  - ⛵ El barco de acero que flota y 🎈 el globo aerostático (Arquímedes y Charles, animados)
+  - 🕰️ El péndulo de Galileo, 🚑 el efecto Doppler y 🪐 las elipses de Kepler (animados)
+  - 🧯 Cuarenta moléculas apretadas (Boyle) y 🎬 la película irreversible de la entropía
+  - 🥤 El «pssshhh» de la ley de Henry y ⚖️ la balanza incorruptible de Lavoisier
+  - 🦋 Las polillas del abedul (Darwin), 🛢️ el barril de Liebig y 🦊 las orejas del zorro (Allen)
+  - ⏳ El trabajo que se expande (Parkinson) y 🎯 la métrica corrompida (Goodhart)
+  - 🪙 Dinero malo, dinero bueno (Gresham) y 🏰 la toma del castillo (Pournelle)
+  - 🚦 Reacción con opciones (Hick), 🎯 cazar dianas (Fitts) y 🔢 la prueba del 7±2 (Miller)
+  - 🕵️ El detector de fraudes (Benford), 📚 el analizador de textos (Zipf) y 🔀 la paradoja de Simpson
+  - 🗳️ El voto útil (Duverger), 🪟 la ventana de Overton y 🎭 ¿parodia o en serio? (Poe)
+  - 🖐️ El signo de la vesícula (Courvoisier), 🫛 el huerto de Mendel y 🧠 la caja rígida (Monro-Kellie)
 - 🎓 **Modo estudio**: partidas de 10 preguntas mezclando enunciados textuales y escenarios de la vida real, con explicación en cada respuesta.
 - 🌙 **Tema claro/oscuro** con memoria de preferencia.
 - 📴 **Funciona sin conexión** (service worker + manifest PWA).
@@ -71,9 +73,12 @@ El sitio es 100 % estático: activa GitHub Pages sobre la rama principal y queda
 │   └── estilos.css       # Tokens de diseño, disposición y componentes
 ├── js/
 │   ├── datos.js               # Catálogo completo de leyes (contenido)
-│   ├── interactivos.js        # Juegos y simuladores principales + gráficos SVG
-│   ├── interactivos-extra1.js # Interactivos de economía, tecnología y psicología
-│   ├── interactivos-extra2.js # Interactivos de sociología, gestión, estadística y medicina
+│   ├── interactivos.js        # Juegos y simuladores principales + gráficos SVG compartidos
+│   ├── interactivos-extra1.js # Fábricas reutilizables + economía, tecnología y psicología
+│   ├── interactivos-extra2.js # Sociología, gestión, estadística y medicina
+│   ├── interactivos-extra3.js # Ampliación (Overton, Simpson, Monro-Kellie...)
+│   ├── interactivos-extra4.js # Física con animaciones (barco, globo, péndulo, Doppler...)
+│   ├── interactivos-extra5.js # Química y biología (Henry, Lavoisier, Darwin, Liebig...)
 │   ├── quiz.js                # Modo estudio
 │   └── app.js            # Navegación, catálogo, modal, arranque
 ├── sw.js                 # Service worker (sin conexión)

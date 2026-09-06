@@ -117,10 +117,11 @@
 
   function pintarFiltros() {
     var zona = $("#filtros-categorias");
-    var chips = ['<button class="chip' + (estado.categoria === "todas" ? " activo" : "") + '" data-cat="todas">Todas</button>'];
+    var chips = ['<button class="chip' + (estado.categoria === "todas" ? " activo" : "") + '" data-cat="todas">Todas <span class="chip-n">' + LEYES.length + "</span></button>"];
     Object.keys(CATEGORIAS).forEach(function (clave) {
       var c = CATEGORIAS[clave];
-      chips.push('<button class="chip' + (estado.categoria === clave ? " activo" : "") + '" style="--chip-color:' + c.color + '" data-cat="' + clave + '">' + c.icono + " " + c.nombre + "</button>");
+      var n = LEYES.filter(function (l) { return l.cat === clave; }).length;
+      chips.push('<button class="chip' + (estado.categoria === clave ? " activo" : "") + '" style="--chip-color:' + c.color + '" data-cat="' + clave + '">' + c.icono + " " + c.nombre + ' <span class="chip-n">' + n + "</span></button>");
     });
     zona.innerHTML = chips.join("");
     $$(".chip", zona).forEach(function (ch) {
@@ -153,7 +154,7 @@
     zona.innerHTML = lista.map(function (l) {
       var c = CATEGORIAS[l.cat];
       return '<article class="tarjeta-ley" style="--cat-color:' + c.color + '" data-ley="' + l.id + '" tabindex="0" role="button" aria-label="' + l.nombre + '">' +
-        '<div class="etiquetas"><span class="insignia">' + c.nombre + "</span>" +
+        '<div class="etiquetas"><span class="insignia">' + c.icono + " " + c.nombre + "</span>" +
         (interactivoDe(l) ? '<span class="insignia insignia-interactivo">🕹️ interactivo</span>' : "") +
         "</div><h3>" + l.nombre + "</h3>" +
         '<p class="enunciado">«' + l.enunciado + "»</p>" +
@@ -260,6 +261,9 @@
     $("#entrada-busqueda").addEventListener("input", function (e) {
       estado.busqueda = e.target.value;
       pintarCatalogo();
+    });
+    $("#boton-azar").addEventListener("click", function () {
+      abrirModal(LEYES[Math.floor(Math.random() * LEYES.length)]);
     });
     window.addEventListener("hashchange", navegar);
     navegar();

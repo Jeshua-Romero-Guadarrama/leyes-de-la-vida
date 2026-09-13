@@ -97,19 +97,25 @@
     zona.innerHTML = Object.keys(CATEGORIAS).map(function (clave) {
       var c = CATEGORIAS[clave];
       var n = LEYES.filter(function (l) { return l.cat === clave; }).length;
+      var nSims = INTERACTIVOS.filter(function (s) {
+        var ley = porId(s.ley);
+        return ley && ley.cat === clave;
+      }).length;
       return '<a class="tarjeta-categoria" style="--cat-color:' + c.color + '" href="#/catalogo/' + clave + '">' +
-        "<h3>" + c.icono + " " + c.nombre + "</h3>" +
-        "<p>" + c.desc + '</p><p class="contador">' + n + " leyes</p></a>";
+        '<div class="cat-cabecera"><span class="cat-icono">' + c.icono + "</span><h3>" + c.nombre + "</h3></div>" +
+        '<p class="cat-desc">' + c.desc + "</p>" +
+        '<div class="cat-pie"><span class="cat-contador">' + n + " leyes · " + nSims + ' 🕹️</span><span class="cat-flecha">Explorar →</span></div></a>';
     }).join("");
 
-    var dia = LEYES[new Date().getDate() % LEYES.length];
+    var hoy = new Date();
+    var dia = LEYES[(hoy.getFullYear() * 372 + hoy.getMonth() * 31 + hoy.getDate()) % LEYES.length];
     var cat = CATEGORIAS[dia.cat];
     $("#ley-del-dia").innerHTML =
-      '<div class="tarjeta-ley" style="--cat-color:' + cat.color + '" data-ley="' + dia.id + '">' +
-      '<div class="etiquetas"><span class="insignia">' + cat.nombre + "</span></div>" +
+      '<div class="tarjeta-ley tarjeta-dia" style="--cat-color:' + cat.color + '" data-ley="' + dia.id + '" tabindex="0" role="button">' +
+      '<div class="etiquetas"><span class="insignia">' + cat.icono + " " + cat.nombre + '</span><span class="insignia insignia-interactivo">📌 hoy</span></div>' +
       "<h3>" + dia.nombre + "</h3>" +
       '<p class="enunciado">«' + dia.enunciado + "»</p>" +
-      '<p class="autoria">' + dia.autor + " · " + dia.anio + "</p></div>";
+      '<p class="autoria">' + dia.autor + " · " + dia.anio + " · <strong>toca para leerla y jugarla →</strong></p></div>";
     $("#ley-del-dia .tarjeta-ley").addEventListener("click", function () { abrirModal(dia); });
   }
 
